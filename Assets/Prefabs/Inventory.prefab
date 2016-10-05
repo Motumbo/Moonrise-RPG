@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000013990413684}
+  m_IsPrefabParent: 1
+--- !u!1 &1000013990413684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013681790800}
+  - 114: {fileID: 114000012904870474}
+  - 114: {fileID: 114000011825247990}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000013681790800
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013990413684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.9944, y: -37.681973, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000011825247990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013990413684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76f1d52c0b4b6b449e975fb52fe1066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listaItemsBDD:
+  - {fileID: 154210, guid: ae5fb9c402907bc4e865e3a49346e6d2, type: 2}
+  - {fileID: 120186, guid: 4c39e057ee2aae6409588de6ace360b3, type: 2}
+  - {fileID: 149832, guid: e61ac175def8a0147a417a1c587990c9, type: 2}
+  - {fileID: 142018, guid: 982d69312bfab2f48a744c71f8f55252, type: 2}
+  - {fileID: 195664, guid: a89d91e6c7c67f74aafecdfa3d86c942, type: 2}
+  - {fileID: 100118, guid: 88f317a766a29b1468dbba156e22eba7, type: 2}
+  - {fileID: 145784, guid: bd0510b769da3144a8402a6f3a90ab5c, type: 2}
+  - {fileID: 169398, guid: 8efb4931e72146340837b7adc782cca5, type: 2}
+  - {fileID: 157428, guid: 07a8e2cfb88e1bd49b04ced93f811832, type: 2}
+  - {fileID: 195976, guid: af7402ac60591e9439e1627648c968f2, type: 2}
+  - {fileID: 139942, guid: 45606f4cbca12424a93a387ff2203fcd, type: 2}
+  listaSlotsLootPanel: []
+  canvas_loot_Panel: {fileID: 1000013144257184, guid: 85e4678d55d1cef49a1b62a438f57e06,
+    type: 2}
+  canvasUi: {fileID: 0}
+--- !u!114 &114000012904870474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013990413684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed35cad0cede8b468f8abeee3319460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas_interfaz_usuario: {fileID: 1000010016565678, guid: b5ba8e2eb1caebd44bb2d74912566313,
+    type: 2}
+  itemsLoot: {fileID: 114000011825247990}
+  canvas_Tooltip: {fileID: 1000010893870350, guid: 8feb6dbcdec1cc34fb565c6782883185,
+    type: 2}
+  resizablePanelText: {fileID: 0}
+  tooltipText: {fileID: 0}
+  list_Slots_Equipment: []
+  list_Slots_Quest: []
+  list_Slots_Misc: []
+  list_Slots_Equiped: []
+  selectedItem: {fileID: 0}
+  selectedItemSlot: {fileID: 0}
+  name: {fileID: 0}
+  clas: {fileID: 0}
+  level: {fileID: 0}
+  experience: {fileID: 0}
+  experienceRequiered: {fileID: 0}
+  strength: {fileID: 0}
+  agility: {fileID: 0}
+  wisdom: {fileID: 0}
+  maxlife: {fileID: 0}
+  maxmana: {fileID: 0}
+  liferegen: {fileID: 0}
+  manaregen: {fileID: 0}
+  blockchance: {fileID: 0}
+  stunchance: {fileID: 0}
+  criticalstrikechance: {fileID: 0}
+  piercechance: {fileID: 0}
+  attackspeed: {fileID: 0}
+  dodgechance: {fileID: 0}
+  immunitychance: {fileID: 0}
+  movementSpeed: {fileID: 0}
+  damage: {fileID: 0}
+  armor: {fileID: 0}
+  Estrength: 0
+  Eagility: 0
+  Ewisdom: 0
+  Emaxlife: 0
+  Emaxmana: 0
+  Eliferegen: 0
+  Emanaregen: 0
+  Eblockchance: 0
+  Estunchance: 0
+  Ecriticalstrikechance: 0
+  Epiercechance: 0
+  Eattackspeed: 0
+  Edodgechance: 0
+  Eimmunitychance: 0
+  EmovementSpeed: 0
+  Edamage: 0
+  Earmor: 0

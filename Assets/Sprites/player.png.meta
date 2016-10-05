@@ -1,0 +1,227 @@
+fileFormatVersion: 2
+guid: cd2b252eefd6145468af3638ac016506
+timeCreated: 1436072162
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: player_r_head
+    21300002: player_l_head
+    21300004: player_r_arm_l
+    21300006: player_r_arm_r
+    21300008: player_r_torse
+    21300010: player_l_torso
+    21300012: player_r_hand_l
+    21300014: player_r_hand_r
+    21300016: player_r_foot_l
+    21300018: player_r_foot_r
+    21300020: weapon_1
+    21300022: weapon_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_r_head
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 730
+        width: 108
+        height: 187
+      alignment: 9
+      pivot: {x: 0.41288617, y: 0.122662716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_l_head
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 732
+        width: 111
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_arm_l
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 660
+        width: 70
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_arm_r
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 658
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_torse
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 528
+        width: 96
+        height: 103
+      alignment: 9
+      pivot: {x: 0.5, y: 0.72835684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_l_torso
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 526
+        width: 95
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_hand_l
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 443
+        width: 52
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_hand_r
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 442
+        width: 41
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_foot_l
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 288
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 0, z: 0, w: 4}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: player_r_foot_r
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 288
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: weapon_1
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 587
+        width: 175
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: weapon_2
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 226
+        width: 89
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

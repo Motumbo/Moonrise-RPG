@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bb563c9fd82d4c046b0a2b00fb8b9131
+timeCreated: 1474757891
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - characterPortraitSprite: {fileID: 21300000, guid: 0fe5432c2b7f50c479215a1e39314fce,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
