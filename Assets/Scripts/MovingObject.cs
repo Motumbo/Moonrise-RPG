@@ -13,7 +13,7 @@ public abstract class MovingObject : MonoBehaviour
     private float inverseMoveTime;          //Used to make movement more efficient.
 
     public int actionPointsMax = 10;
-    //public int currentActionPoints = 10;
+    public int currentActionPoints;
 
     //Protected, virtual functions can be overridden by inheriting classes.
     protected virtual void Start()
@@ -121,7 +121,7 @@ public abstract class MovingObject : MonoBehaviour
 
     public void StartTurn()
     {
-        //currentActionPoints = actionPointsMax;
+        currentActionPoints = actionPointsMax;
     }
 }
 

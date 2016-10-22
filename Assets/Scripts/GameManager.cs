@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
     public float levelStartDelay = 2f;                      //Time to wait before starting level, in seconds.
     public float turnDelay = 0.1f;                          //Delay between each Player turn.
     
-    public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-    public bool playersTurn = true;     //Boolean to check if it's players turn, hidden in inspector but public.
-
+    public static GameManager instance =null;              //Static instance of GameManager which allows it to be accessed by any other script.
+    public bool playersTurn = true;                        //Boolean to check if it's players turn, hidden in inspector but public.
+ 
     private string difficulty;
    
     //private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
@@ -25,11 +25,12 @@ public class GameManager : MonoBehaviour
     private int level = 1;                                  //Current level number, expressed in game as "Day 1".
     private List<Enemy> listaEnemies;                       //List of all Enemy units, used to issue them move commands.
     private List<Player> listaPlayers;
-    private bool enemiesMoving;                             //Boolean to check if enemies are moving.
+
     private bool doingSetup = true;                         //Boolean to check if we're setting up board, prevent Player from moving during setup.
 
     private List<MovingObject> listaTodasLasEntidadesQueTenganTurnos;
-    private int quienJuega; //Segun el indice de la lista de todos los que juegan 
+    public int quienJuega = -1; //Segun el indice de la lista de todos los que juegan 
+    public MovingObject playingPlayer;
 
     //Awake is always called before any Start functions
     void Awake()
@@ -47,7 +48,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         listaTodasLasEntidadesQueTenganTurnos = new List<MovingObject>();
         listaEnemies = new List<Enemy>();  
-		listaPlayers = new List<Player>();     
+		listaPlayers = new List<Player>();
+        quienJuega = -1;
     }
    
     private void SetCanvasPlayerUi()
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
 		SetCanvasPlayerUi();
 		SetBoardManager();
         Invoke("HideLevelImage", levelStartDelay);
+
+
         //Call the SetupScene function of the BoardManager script, pass it current level number.
         //boardScript.Start();
     }
@@ -83,12 +87,24 @@ public class GameManager : MonoBehaviour
     //Update is called every frame.
     void Update()
     {
-        //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
-        if (playersTurn || enemiesMoving || doingSetup)
-            //If any of these are true, return and do not start MoveEnemies.
-            return;
-        //Start moving enemies.
-        StartCoroutine(MoveEnemies());
+        if (listaTodasLasEntidadesQueTenganTurnos.Count > 0)
+        {
+           
+
+            /*
+            //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
+            if (playingPlayer is Player)
+                //If any of these are true, return and do not start MoveEnemies.
+
+                return;
+            //Start moving enemies.
+            else if (playingPlayer is Enemy)
+            {
+                //StartCoroutine(MoveEnemies((Enemy) playingPlayer));
+            }
+
+            */
+        } 
     }
 
     //Call this to add the passed in Enemy to the List of Enemy objects.
@@ -113,35 +129,21 @@ public class GameManager : MonoBehaviour
     }
 
     //Coroutine to move enemies in sequence.
-    IEnumerator MoveEnemies()
+    IEnumerator MoveEnemies(Enemy playingEnemy)
     {
-        //While enemiesMoving is true player is unable to move.
-        enemiesMoving = true;
-
         //Wait for turnDelay seconds, defaults to .1 (100 ms).
+        yield return new WaitForSeconds(turnDelay);  
+        
+        //Call the MoveEnemy function of the Enemy.
+        playingEnemy.MoveEnemy();
+
+        //Wait for Enemy's moveTime before moving next Enemy, 
+        yield return new WaitForSeconds(playingEnemy.moveTime);
+
+        //Once Enemies are done moving, Wait for turnDelay seconds.
         yield return new WaitForSeconds(turnDelay);
 
-        //COMO SE MUEVEN LOS ENEMIGOS TENDRIA QUE SER OTRA CLASE Y QUE LLAME ESOS METODOS
-        //If there are no enemies spawned (IE in first level):      
-        if (listaEnemies.Count == 0)
-        {
-            //Wait for turnDelay seconds between moves, replaces delay caused by enemies moving when there are none.
-            yield return new WaitForSeconds(turnDelay);
-        }      
-        //Loop through List of Enemy objects.
-        for (int i = 0; i < listaEnemies.Count; i++)
-        {
-            //Call the MoveEnemy function of Enemy at index i in the enemies List.
-            listaEnemies[i].MoveEnemy();
-
-            //Wait for Enemy's moveTime before moving next Enemy, 
-            yield return new WaitForSeconds(listaEnemies[i].moveTime);
-        }
-        //Enemies are done moving, set enemiesMoving to false.
-        enemiesMoving = false;
-        //Once Enemies are done moving, set playersTurn to true so player can move.
-        playersTurn = true;
-        yield return new WaitForSeconds(turnDelay);
+        EndTurn(); //Ceder el turno al proximo enemigo
     }
 
     public void SetDifficultylvl(string selectedDifficulty)
@@ -161,6 +163,12 @@ public class GameManager : MonoBehaviour
 		this.SetPlayerStats(player);
 		GameManager.instance.listaPlayers.Add(player);
         listaTodasLasEntidadesQueTenganTurnos.Add(player);
+        if (quienJuega == -1)
+        {
+            quienJuega = 0;
+            playingPlayer = listaTodasLasEntidadesQueTenganTurnos[quienJuega];
+        }
+
         //}
     }
 
@@ -213,8 +221,11 @@ public class GameManager : MonoBehaviour
 
     public void EndTurn()
     {
+        /*
         quienJuega = (quienJuega + 1)% listaTodasLasEntidadesQueTenganTurnos.Count;
-        listaTodasLasEntidadesQueTenganTurnos[quienJuega].StartTurn();
+        playingPlayer = listaTodasLasEntidadesQueTenganTurnos[quienJuega];
+        playingPlayer.StartTurn();
+        */
     }
 
 

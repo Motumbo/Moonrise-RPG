@@ -104,7 +104,7 @@ public class Player : MovingObject
     void Update()
     {
 
-        if (!GameManager.instance.playersTurn) //Se fija si le toca
+        if (!GameManager.instance.playingPlayer == this) //Se fija si le toca
         {
             return;
         }
